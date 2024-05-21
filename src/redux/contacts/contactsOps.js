@@ -30,3 +30,6 @@ export const deleteContact = createAsyncThunk("contacts/deleteContact", async (i
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
+//! /contacts/{contactId} - PATCH -- ОНОВЛЕННЯ
+// export const refresh = createAsyncThunk("contacts/refresh", async (id, thunkAPI) => {});
