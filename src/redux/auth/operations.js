@@ -11,3 +11,6 @@ axios.defaults.baseURL = "https://connections-api.herokuapp.com";
 
 // //? /users/logout - POST
 // export const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {});
+
+//! /contacts/{contactId} - PATCH -- ОНОВЛЕННЯ
+// export const refresh = createAsyncThunk("contacts/refresh", async (id, thunkAPI) => {});
