@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-import { selectError, selectFilteredContacts, selectLoading } from "../../redux/contacts/selectors";
+import { selectFilteredContacts } from "../../redux/contacts/selectors";
 import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 
 const ContactList = () => {
   const selectContacts = useSelector(selectFilteredContacts);
-  const isLoading = useSelector(selectLoading);
-  const isError = useSelector(selectError);
+  // const isLoading = useSelector(selectLoading);
+  // const isError = useSelector(selectError);
   return (
     <>
-      {isLoading && <p className={css.loading}> Loading...</p>}
-      {isError && <p className={css.selectError}> Oops, something happend...</p>}
+      {/* {isLoading && <p className={css.loading}> Loading...</p>}
+      {isError && <p className={css.selectError}> Oops, something happend...</p>} */}
 
       {selectContacts.length !== 0 ? (
         <ul className={css.contactList}>

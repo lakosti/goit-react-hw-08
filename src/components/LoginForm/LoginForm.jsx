@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from "formik";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../redux/auth/operations";
 
 const initialValue = {
   email: "",
@@ -7,12 +8,12 @@ const initialValue = {
 };
 
 const LoginForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    //! зробити діспатч логіну і передати туди value
-    //! react hot toast -  розпакувати діспатч і зробити вивід повідомлення якщо шось нет так, або якщо операція успішна
+    dispatch(logIn(values));
     actions.resetForm();
+    //! react hot toast -  розпакувати діспатч і зробити вивід повідомлення якщо шось нет так, або якщо операція успішна
   };
   return (
     <Formik initialValues={initialValue} onSubmit={handleSubmit}>
