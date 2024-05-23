@@ -1,6 +1,9 @@
 import { Field, Form, Formik } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import toast from "react-hot-toast";
+import { selectIsLoading } from "../../redux/auth/selectors";
+import Loader from "../Loader/Loader";
 
 const initialValue = {
   name: "",
@@ -9,11 +12,18 @@ const initialValue = {
 };
 const RegistrationForm = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
 
   const handleSubmit = (values, actions) => {
-    dispatch(register(values));
+    dispatch(register(values))
+      .unwrap()
+      .then(() => {
+        toast.success("Successfully register");
+      })
+      .catch(() => {
+        toast.error("Incorrect email or password");
+      });
     actions.resetForm();
-    //! додати повідомлення
   };
   return (
     <Formik initialValues={initialValue} onSubmit={handleSubmit}>
@@ -30,7 +40,7 @@ const RegistrationForm = () => {
           Password
           <Field type="password" name="password" placeholder="Please enter your password" />
         </label>
-        <button type="submit">Register</button>
+        <button type="submit">{isLoading ? <Loader /> : "Register"}</button>
       </Form>
     </Formik>
   );
