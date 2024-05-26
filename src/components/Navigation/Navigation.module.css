@@ -1,0 +1,7 @@
+.navigateLink {
+  text-decoration: none;
+}
+
+.navigateLink:not(:last-child) {
+  margin-right: 30px;
+}

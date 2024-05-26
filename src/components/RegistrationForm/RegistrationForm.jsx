@@ -1,9 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/auth/operations";
-import toast from "react-hot-toast";
 import { selectIsLoading } from "../../redux/auth/selectors";
 import Loader from "../Loader/Loader";
+import toast from "react-hot-toast";
+import css from "./RegistrationForm.module.css";
 
 const initialValue = {
   name: "",
@@ -27,20 +28,37 @@ const RegistrationForm = () => {
   };
   return (
     <Formik initialValues={initialValue} onSubmit={handleSubmit}>
-      <Form>
-        <label>
+      <Form className={css.loginForm}>
+        <label className={css.loginFormLabel}>
           Name
-          <Field type="text" name="name" placeholder="Please enter your name" />
+          <Field
+            className={css.loginFormInput}
+            type="text"
+            name="name"
+            placeholder="Please enter your name"
+          />
         </label>
-        <label>
+        <label className={css.loginFormLabel}>
           Email
-          <Field type="email" name="email" placeholder="Please enter your email" />
+          <Field
+            className={css.loginFormInput}
+            type="email"
+            name="email"
+            placeholder="Please enter your email"
+          />
         </label>
-        <label>
+        <label className={css.loginFormLabel}>
           Password
-          <Field type="password" name="password" placeholder="Please enter your password" />
+          <Field
+            className={css.loginFormInput}
+            type="password"
+            name="password"
+            placeholder="Please enter your password"
+          />
         </label>
-        <button type="submit">{isLoading ? <Loader /> : "Register"}</button>
+        <button className={css.loginFormBtn} type="submit">
+          {isLoading ? <Loader /> : "Register"}
+        </button>
       </Form>
     </Formik>
   );
