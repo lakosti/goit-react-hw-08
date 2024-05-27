@@ -5,7 +5,9 @@ import css from "./LoginPage.module.css";
 const LoginPage = () => {
   return (
     <div className={css.wrapper}>
-      <PageTitle>Please log in</PageTitle>
+      <PageTitle>
+        <span className={css.loginTitle}>Login</span>
+      </PageTitle>
       <LoginForm />
     </div>
   );

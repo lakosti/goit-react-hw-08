@@ -4,6 +4,7 @@ import { logIn } from "../../redux/auth/operations";
 import toast from "react-hot-toast";
 import { selectIsLoading } from "../../redux/auth/selectors";
 import Loader from "../Loader/Loader";
+import css from "./LoginForm.module.css";
 
 const initialValue = {
   email: "",
@@ -28,16 +29,18 @@ const LoginForm = () => {
   return (
     <>
       <Formik initialValues={initialValue} onSubmit={handleSubmit}>
-        <Form>
-          <label>
+        <Form className={css.loginForm}>
+          <label className={css.loginLabel}>
             Email
-            <Field type="email" name="email" placeholder="Please enter your email" />
+            <Field className={css.loginInput} type="email" name="email" />
           </label>
-          <label>
+          <label className={css.loginLabel}>
             Password
-            <Field type="password" name="password" placeholder="Please enter your password" />
+            <Field className={css.loginInput} type="password" name="password" />
           </label>
-          <button type="submit">{isLoading ? <Loader /> : "Log in"}</button>
+          <button className={css.loginBtn} type="submit">
+            {isLoading ? <Loader /> : "Log in"}
+          </button>
         </Form>
       </Formik>
     </>
