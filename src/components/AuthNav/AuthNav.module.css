@@ -1,7 +1,20 @@
 .authNavLink {
   text-decoration: none;
+  padding: 10px;
+  border: 2px solid purple;
+  border-radius: 6px;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .authNavLink:not(:last-child) {
   margin-right: 30px;
+}
+.authNavLink:hover {
+  background-color: rgb(103, 42, 98);
+  color: rgb(196, 161, 196);
+}
+.active {
+  background-color: rgb(103, 42, 98);
+  color: rgb(196, 161, 196);
 }

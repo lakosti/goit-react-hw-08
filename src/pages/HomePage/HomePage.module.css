@@ -1,0 +1,16 @@
+.homeWrapper {
+  padding: 30px;
+  color: white;
+}
+.homeTitle {
+  display: block;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.homeText {
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 20px;
+  text-align: center;
+}
