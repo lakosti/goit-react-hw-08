@@ -28,35 +28,35 @@ const RegistrationForm = () => {
   };
   return (
     <Formik initialValues={initialValue} onSubmit={handleSubmit}>
-      <Form className={css.loginForm}>
-        <label className={css.loginFormLabel}>
-          Name
+      <Form className={css.registerForm}>
+        <label className={css.registerFormLabel}>
+          <span className={css.registerSpan}>Name</span>
           <Field
-            className={css.loginFormInput}
+            className={css.registerFormInput}
             type="text"
             name="name"
-            placeholder="Please enter your name"
+            placeholder="Enter your name"
           />
         </label>
-        <label className={css.loginFormLabel}>
-          Email
+        <label className={css.registerFormLabel}>
+          <span className={css.registerSpan}>Email</span>
           <Field
-            className={css.loginFormInput}
+            className={css.registerFormInput}
             type="email"
             name="email"
-            placeholder="Please enter your email"
+            placeholder="Enter your email"
           />
         </label>
-        <label className={css.loginFormLabel}>
-          Password
+        <label className={css.registerFormLabel}>
+          <span className={css.registerSpan}>Password</span>
           <Field
-            className={css.loginFormInput}
+            className={css.registerFormInput}
             type="password"
             name="password"
-            placeholder="Please enter your password"
+            placeholder="Enter your password"
           />
         </label>
-        <button className={css.loginFormBtn} type="submit">
+        <button className={css.registerFormBtn} type="submit">
           {isLoading ? <Loader /> : "Register"}
         </button>
       </Form>

@@ -31,12 +31,17 @@ const LoginForm = () => {
       <Formik initialValues={initialValue} onSubmit={handleSubmit}>
         <Form className={css.loginForm}>
           <label className={css.loginLabel}>
-            Email
-            <Field className={css.loginInput} type="email" name="email" />
+            <span className={css.loginSpan}>Email</span>
+            <Field className={css.loginInput} type="email" placeholder="Email" name="email" />
           </label>
           <label className={css.loginLabel}>
-            Password
-            <Field className={css.loginInput} type="password" name="password" />
+            <span className={css.loginSpan}> Password</span>
+            <Field
+              className={css.loginInput}
+              type="password"
+              placeholder="Password"
+              name="password"
+            />
           </label>
           <button className={css.loginBtn} type="submit">
             {isLoading ? <Loader /> : "Log in"}

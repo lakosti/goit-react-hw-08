@@ -1,0 +1,47 @@
+.registerForm {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  gap: 30px;
+  width: 400px;
+  margin: 0 auto;
+}
+.registerFormLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerSpan {
+  color: white;
+  margin-bottom: 10px;
+}
+.registerFormInput {
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 15px;
+}
+.registerFormInput:focus {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+}
+.registerFormInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.registerFormBtn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.registerFormBtn:hover {
+  width: 250px;
+}
