@@ -1,6 +1,5 @@
 .form {
   padding: 10px;
-  margin-bottom: 20px;
 }
 .formLabel {
   display: flex;
@@ -13,7 +12,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: rgb(87, 22, 143);
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .formInput {
   width: 100%;
@@ -39,15 +38,19 @@
 }
 .formBtn {
   display: block;
-  padding: 10px;
-  margin-left: auto;
-  background-color: rgb(145, 93, 193);
+  padding: 15px;
   color: white;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid rgb(145, 93, 193);
+  background-color: rgb(106, 42, 117);
+  border-radius: 25px;
+  width: 170px;
+  transition: all 0.3s ease-in-out;
   transform: scale(1);
-  transition: transform 250ms linear;
+  margin: 0 auto;
 }
 .formBtn:hover {
-  transform: scale(1.05);
+  cursor: pointer;
+  background-color: rgb(103, 42, 98);
+  color: rgb(196, 161, 196);
+  transform: scale(1.1);
 }

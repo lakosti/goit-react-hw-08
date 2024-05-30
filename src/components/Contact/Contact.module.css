@@ -1,11 +1,9 @@
 .contactBtn {
   display: block;
   padding: 10px;
-  /* margin-left: auto; */
   color: rgb(84, 5, 84);
   border: 2px solid rgb(145, 93, 193);
   border-radius: 5px;
-  transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
 .contactBtn:hover {
@@ -25,7 +23,6 @@
   transition: all 0.3s ease-in-out;
 }
 .contactItemWrap:hover {
-  cursor: pointer;
   background-color: rgb(103, 42, 98);
   color: rgb(196, 161, 196);
 }

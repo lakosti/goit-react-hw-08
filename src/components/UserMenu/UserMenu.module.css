@@ -24,4 +24,5 @@
 .userBtn:hover {
   background-color: rgb(103, 42, 98);
   color: rgb(196, 161, 196);
+  cursor: pointer;
 }
