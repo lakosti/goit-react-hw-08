@@ -10,7 +10,7 @@ const Contact = ({ number, id, name }) => {
   const handleDeleteItem = (id) => dispatch(deleteContact(id));
 
   return (
-    <>
+    <div className={css.contactItemWrap}>
       <div>
         <p>
           <MdPerson />
@@ -23,7 +23,7 @@ const Contact = ({ number, id, name }) => {
       <button className={css.contactBtn} onClick={() => handleDeleteItem(id)} type="submit" id={id}>
         Delete
       </button>
-    </>
+    </div>
   );
 };
 

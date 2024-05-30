@@ -1,24 +1,3 @@
-.contactList {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contactItem {
-  padding: 10px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(1);
-  transition: all 0.3s ease-in-out;
-}
-
-.contactItem:hover {
-  background-color: rgb(238, 238, 238);
-  transform: scale(1.02);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.12), 0 5px 5px rgba(0, 0, 0, 0.24);
-}
-
 .infoText {
   text-transform: uppercase;
   color: rgb(87, 22, 143);
@@ -40,4 +19,22 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 10px;
+}
+.selectError {
+  text-transform: uppercase;
+  color: rgb(210, 25, 68);
+  font-size: 20px;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.contactList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 800px;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  overflow: auto;
 }

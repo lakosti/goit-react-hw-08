@@ -1,1 +1,27 @@
- 
+.contactWrap,
+.contactWrapForm {
+  border-radius: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contactWrapForm {
+  margin-bottom: 60px;
+  max-width: 900px;
+}
+.contactsTitle {
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.contactNotification {
+  text-transform: uppercase;
+  color: rgb(87, 22, 143);
+  font-size: 20px;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+  text-align: center;
+}

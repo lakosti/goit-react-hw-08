@@ -27,10 +27,6 @@
   letter-spacing: 2px;
 }
 .layout {
-  /* background-image: url(../../img/sign_in.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   overflow: auto;
   height: 100vh;
 }
