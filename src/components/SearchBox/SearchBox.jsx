@@ -1,7 +1,7 @@
-import { useId } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filters/slice";
 import css from "./SearchBox.module.css";
+import { useId } from "react";
 
 const SearchBox = () => {
   const selectNameFilter = useSelector((state) => state.filter.name);
@@ -15,7 +15,7 @@ const SearchBox = () => {
 
   return (
     <div className={css.searchWrap}>
-      <span className={css.searchName}>Find contacts by name:</span>
+      <span className={css.searchName}>Find contacts by name or number:</span>
       <input
         id={id}
         className={css.seacrhInput}
