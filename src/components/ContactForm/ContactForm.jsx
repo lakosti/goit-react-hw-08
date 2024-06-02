@@ -9,7 +9,7 @@ import css from "./ContactForm.module.css";
 const ContactSchema = Yup.object().shape({
   name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required*"),
   number: Yup.string()
-    .matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number format")
+    // .matches(/^\d{3}\d{3}\d{4}$/, "Invalid phone number format")
     .min(8, "Too Short!")
     .max(15, "Too Long!")
     .required("Required*"),
@@ -32,7 +32,13 @@ const ContactForm = () => {
           Name
         </label>
         <div className={css.formText}>
-          <Field className={css.formInput} type="text" name="name" id={nameId} placeholder="Name" />
+          <Field
+            className={css.formInput}
+            type="text"
+            name="name"
+            id={nameId}
+            placeholder="Victoria"
+          />
         </div>
         <ErrorMessage className={css.errorMsg} name="name" component="span" />
 
@@ -46,7 +52,7 @@ const ContactForm = () => {
             type="text"
             name="number"
             id={numberId}
-            placeholder="xxx-xxx-xxxx"
+            placeholder="0999104103"
           />
         </div>
         <ErrorMessage className={css.errorMsg} name="number" component="span" />
